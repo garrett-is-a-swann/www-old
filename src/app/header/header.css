@@ -1,0 +1,20 @@
+.header {
+}
+
+.header .header-picture {
+    background: url(https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/17361546_1358720574194745_4344961362338832583_n.jpg?oh=4511959c152fbd33af70a0ebc426119e&oe=5A63F36E) 
+                no-repeat;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+}
+
+.header .text {
+    font: x-large sans-serif;
+}
+
+.header .header-picture, 
+.header .text {
+    display: inline-block;
+    vertical-align: bottom;
+}
