@@ -1,0 +1,8 @@
+{{config}}
+    <input #newHero
+          (keyup.enter)="addHero(newHero.value)"
+          (blur)="addHero(newHero.value); newHero.value='' ">
+     
+    <button class='button success' (click)="addHero(newHero.value)">Add</button>
+
+    <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul>
