@@ -1,0 +1,23 @@
+<div class="grid-x grid-paddix-x">
+    <!-- Sidebar -->
+    <div class="cell medium-3 medium-cell-block-y">
+        <div *ngFor="let content of config.Sidebar">
+            <div [ngSwitch]="content.type">
+                <img *ngSwitchCase="'img'" src="{{content.src}}">
+                <div *ngSwitchDefault>{{content.type}} not found </div>
+                <p *ngSwitchCase="'p'">{{content.content}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- Content -->
+    <div class="class medium-9 medium-cell-block-y">
+        <div *ngFor="let content of config.Content">
+            <div [ngSwitch]="content.type">
+                <img *ngSwitchCase="'img'" src="{{content.src}}">
+                <p *ngSwitchCase="'p'">{{content.content}}</p>
+                <div *ngSwitchDefault>{{content.type}} not found </div>
+            </div>
+        </div>
+    </div>
+</div>
+

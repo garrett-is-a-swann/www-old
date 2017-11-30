@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
     styleUrls: ['./home.css']
 })
 export class HomeComponent {
-    title = 'app';
+    config: any = {
+        Sidebar:[
+            {type: 'img',
+             src: 'assets/images/mustachioed_man.png'}
+        ],
+        Content:[
+            {type: 'p',
+             content: "This is the beginning's of my site. "+
+                "I plan to host a blog, and other code projects written by me here. "},
+            {type: 'p',
+                    content:"Stay tuned for hopefully cool things!"}
+        ]
+    };
 }

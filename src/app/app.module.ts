@@ -12,6 +12,8 @@ import { ErrorComponent } from './errorpage/errorpage';
 import { HeaderComponent } from './header/header';
 import { LoginComponent } from './login/login';
 import { LoginFormComponent } from './login/login-form/login-form';
+import { SidebarContent } from './sidebar-content/sidebar-content';
+import { FooterComponent } from './footer/footer';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -27,7 +29,9 @@ const appRoutes: Routes = [
         ErrorComponent,
         HeaderComponent,
         LoginComponent,
-        LoginFormComponent
+        LoginFormComponent,
+        SidebarContent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
