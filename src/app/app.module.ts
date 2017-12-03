@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home';
 import { ErrorComponent } from './errorpage/errorpage';
 import { HeaderComponent } from './header/header';
 import { LoginComponent } from './login/login';
-import { LoginFormComponent } from './login/login-form/login-form';
+import { FormComponent } from './form/form';
 import { SidebarContent } from './sidebar-content/sidebar-content';
 import { FooterComponent } from './footer/footer';
 
@@ -29,7 +29,7 @@ const appRoutes: Routes = [
         ErrorComponent,
         HeaderComponent,
         LoginComponent,
-        LoginFormComponent,
+        FormComponent,
         SidebarContent,
         FooterComponent
     ],

@@ -9,7 +9,9 @@ export class HomeComponent {
     config: any = {
         Sidebar:[
             {type: 'img',
-             src: 'assets/images/mustachioed_man.png'}
+                src: 'assets/images/mustachioed_man.png',
+                alt: 'Garrett Swann with a curly mustache and beard.'
+            }
         ],
         Content:[
             {type: 'p',

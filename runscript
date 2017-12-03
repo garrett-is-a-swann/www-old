@@ -10,9 +10,5 @@ then
     cd ..
 fi
 echo '######## startup server ########'
-#PGUSER=admin \
-    #PGHOST=localhost \
-    #PGPASSWORD=secr3tp5wd \
-    #PGDATABASE=core \
-    #PGPORT=5432 \
+sudo PGPASSFILE=.pgpass \
     node server.js
