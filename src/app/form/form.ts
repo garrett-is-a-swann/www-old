@@ -59,12 +59,14 @@ export class FormComponent implements OnInit {
                 ,password:this.config.fields.password.value
             })
             .subscribe((data:any) => {
-            console.log(errors)
+                console.log(errors)
                 console.log(data)
                 console.log(data['username'])
                 this.config.fields.username.error = data.username?data.username:'';
                 this.config.fields.email.error = data.email?data.email:'';
                 this.config.fields.password.error= data.password?data.password:'';
+                console.log(this.config.fields.username.error, this.config.fields.email.error, this.config.fields.password.error)
+
             }); // Sends POST
         }
 

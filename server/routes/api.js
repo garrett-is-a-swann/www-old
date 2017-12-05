@@ -1,13 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
+const session = require('client-sessions');
+router.use(session({
+    cookieName: 'session',
+    secret: 't0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsY',
+    duration: 30 * 60 * 1000,
+    activeDuration: 5 * 60 * 1000,
+}));
+
 const fs = require('fs');
 
 var pgconf = fs.readFileSync('pg.conf', 'ascii');
 
 const { Pool,Client } = require('pg')
 const pool = new Pool({
-    connectionString: pgconf
+    connectionString: 'postgresql://admin:secr3tp5wd@localhost:5432/core'
 })
 
 
@@ -72,6 +80,7 @@ router.route('/login').all((req,res,next)=> {
     }) .get((req, res, next) => {
         next(new Error('Not implemented'));
     }) .post((req, res, next) => {
+        console.log(req.session.user)
         pool.query('Select password_hash, password_salt from verb_login where username = $1', [req.body.username], (e, resp) => {
             console.log(resp);
             if(e) {
@@ -79,7 +88,8 @@ router.route('/login').all((req,res,next)=> {
             }
             else {
                 if(!resp.rows.length) {
-                    res.status(404).send('User not found')
+                    res.status(404).send('User not found');
+                    return;
                 }
                 verifyPassword(req.body.password, [resp.rows[0].password_hash, resp.rows[0].password_salt], (e, s) => {
                     if(e) {
@@ -112,7 +122,6 @@ router.route('/register')
         const values = [];
 
         const errors = {};
-        console.log(req.body.password);
         hashPassword(req.body.password, (err, hashed)=> {
             if(err) {
                 return;
@@ -155,6 +164,8 @@ router.route('/register')
                             pool.query('INSERT INTO verb_login (username, password_hash, password_salt, user_id, permission, date_created)'
                                     +' VALUES ($1, $2, $3, $4, $5, current_timestamp) RETURNING *', [req.body.username, hashed[0].toString('hex'), hashed[1].toString('hex'), resp.rows[0].id, 10 ]).then(resp => {
                                 console.log(resp);
+                                req.session.user = req.body.username;
+                                console.log(req.session.user, ' has logged in');
                                 res.status(201).send('Created')
                             }).catch(e => {
                                 console.log(e);

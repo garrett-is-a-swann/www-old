@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'sidebar-content',
@@ -8,6 +9,8 @@ import { Component, Input } from '@angular/core';
 
 export class SidebarContent {
     @Input('config') config: any;
-    constructor(){
+    path:string ='';
+    constructor(router: Router) {
+        this.path = router.url;
     }
 }

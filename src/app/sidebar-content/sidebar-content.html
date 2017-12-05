@@ -1,4 +1,4 @@
-<div class="grid-x grid-paddix-x">
+<div class="grid-x grid-padding-x">
     <!-- Sidebar -->
     <div class="cell medium-3 medium-cell-block-y">
         <div *ngFor="let content of config.Sidebar">
@@ -10,12 +10,28 @@
         </div>
     </div>
     <!-- Content -->
-    <div class="class medium-9 medium-cell-block-y">
+    <div class="medium-9 medium-cell-block-y">
         <div *ngFor="let content of config.Content">
             <div [ngSwitch]="content.type">
+                <h3 *ngSwitchCase="'h3'" style="text-align: center;">{{content.content}}</h3>
                 <img *ngSwitchCase="'img'" alt="{{content.alt}}" src="{{content.src}}">
                 <p *ngSwitchCase="'p'">{{content.content}}</p>
                 <div *ngSwitchDefault>{{content.type}} not found </div>
+            </div>
+        </div>
+        <div *ngIf='path == "/about-me"'>
+            <p>I am a 4th year Computer Science Student at California State University, Chico.</p>
+            <p>I'm an avid learner in all things CS-related. My interests in Computer Science include AI and Machine Learning, data-driven pipelining, data science, and software engineering.</p>
+            <p>My favorite languages are C++ and Python, although I've touched many others including: Lua, Javascript, Java, Clojure, Hy, sql languages, bash, etc.</p>
+            <p>I'm hoping to fill this portfolio website with many of my creations, including my neuroevolution Mario Artificial Intelligence, so stay tuned!
+            </p>
+        </div>
+        <div *ngIf='path == "/links"' class="grid-x grid-padding-x">
+            <div class="cell medium-6 ">
+                sadf
+            </div>
+            <div class="cell medium-6 ">
+                sadf
             </div>
         </div>
     </div>

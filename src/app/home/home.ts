@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'home',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
     styleUrls: ['./home.css']
 })
 export class HomeComponent {
-    config: any = {
+    path:string ='';
+    constructor(router: Router) {
+        this.path = router.url;
+    }
+    homeConfig: any = {
         Sidebar:[
             {type: 'img',
                 src: 'assets/images/mustachioed_man.png',
@@ -20,5 +25,25 @@ export class HomeComponent {
             {type: 'p',
                     content:"Stay tuned for hopefully cool things!"}
         ]
+    };
+
+    linksConfig: any = {
+    };
+
+    aboutConfig: any = {
+        Sidebar:[
+            {type: 'img',
+                src: 'assets/images/garrettAngelIsland.png',
+                alt: 'Garrett Swann on Angel Island in San Francisco, California.'
+            }
+        ],
+        Content:[
+            {type: 'h3',
+                content: "About Me"}
+
+        ]
+    };
+
+    resumeConfig: any = {
     };
 }

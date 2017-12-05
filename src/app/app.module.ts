@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -15,9 +15,15 @@ import { FormComponent } from './form/form';
 import { SidebarContent } from './sidebar-content/sidebar-content';
 import { FooterComponent } from './footer/footer';
 
+// Other's Components
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'links', component: HomeComponent },
+    { path: 'resume', component: HomeComponent },
+    { path: 'about-me', component: HomeComponent },
     { path: '**', component: ErrorComponent },
 ];
 
@@ -31,7 +37,7 @@ const appRoutes: Routes = [
         LoginComponent,
         FormComponent,
         SidebarContent,
-        FooterComponent
+        FooterComponent,
     ],
     imports: [
         BrowserModule,
@@ -39,9 +45,12 @@ const appRoutes: Routes = [
         RouterModule.forRoot(
             appRoutes
         ),
-        FormsModule
+        FormsModule,
+
+
+        PdfViewerModule
     ],
-    providers: [],
+    providers: [Title],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
