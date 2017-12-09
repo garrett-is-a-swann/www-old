@@ -39,7 +39,11 @@ export class HomeComponent {
         ],
         Content:[
             {type: 'h3',
-                content: "About Me"}
+                content: "About Me"},
+            {type: 'p',
+                content:"I am a 4th year Computer Science student at Chico State University."},
+            {type: 'p',
+                content:"I am an avid learner when it comes to all thing programming. <br>My top interests in the field are in AI and Machine Learning, data-driven pipelines, data science, and software engineering."}
 
         ]
     };

@@ -29,10 +29,11 @@
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="./styles.css">
     </head>
-    <body>
+    <body bgcolor="#add8e6" >
         <div class="grid-container">
             <app-root></app-root>
         </div>
+        <script src="cytoscape.js"></script>
         <script src="js/vendor/jquery.min.js"></script>
         <script src="js/vendor/what-input.js"></script>
         <script src="js/vendor/foundation.min.js"></script>
@@ -40,6 +41,10 @@
         <script>
             $(document).ready(function() {
                 $(document).foundation();
+            });
+            // Init Cytoscape with Jquery
+            var cy = cytoscape({
+                container: $('#cy')
             });
         </script>
     </body>
