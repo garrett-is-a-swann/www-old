@@ -11,7 +11,7 @@ router.use(session({
 
 const fs = require('fs');
 
-var pgconf = fs.readFileSync('pg.conf', 'ascii');
+var pgconf = router.get('config');
 
 const { Pool,Client } = require('pg')
 const pool = new Pool({

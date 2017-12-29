@@ -1,0 +1,18 @@
+<div class="grid-x grid-padding-x">
+    <div class="medium-6 cell">
+        <h3> Login </h3>
+        <formC [(config)]='loginConfig'></formC>
+    </div>
+    <div class="medium-6 cell">
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-absolute position-right" style="min-height: 300px;" id="RightSplit" data-off-canvas>
+                <!-- Your menu or Off-canvas content goes here -->
+                <button class="button" data-toggle="RightSplit">x</button>
+                <formC [(config)]='registerConfig'></formC>
+            </div>
+            <div class="off-canvas-content" style="min-height: 300px;" data-off-canvas-content>
+                <button type="button" class="button" data-toggle="RightSplit">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
