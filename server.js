@@ -6,6 +6,7 @@ const bodyParser = require('body-parser'); // This is middleware to bind angular
 const config = require('./configs/api-conf.json');
 
 const api = require('./server/routes/api');
+const blog = require('./server/routes/blog');
 
 
 const app = express();
@@ -20,8 +21,14 @@ app.use(express.static(path.join(__dirname, 'client/dist')));
 app.use(express.static(path.join(__dirname, 'server/static')));
 app.use(express.static(path.join(__dirname, 'configs')));
 
+app.use((req, res, next) => {
+    console.log('Time: %d', Date.now());
+    next();
+});
+
 // Set our api routes
 app.use('/api', api);
+app.use('/blog', blog);
 
 // ADD MORE ROUTES HERE.. * COMES LAST
 

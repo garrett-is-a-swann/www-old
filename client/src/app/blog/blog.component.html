@@ -1,0 +1,19 @@
+<!-- This section is wrapped by the app displayer. Think of it as floating. -->
+<div class='blog-stream  grid-x' *ngFor='let post of posts'>
+    <div class='content-card shaded clickable  card large-offset cell' 
+        (click)='onSelect(post.id)' 
+        routerLink='/post/{{post.id}}'
+        routerLinkActivate="active">
+        <div class='stream-item-header c1bg_ shaded-soft card-divider grid-x'> 
+            <div class='stream-header-title small-8'>
+                <h5 class='c2fc_mm'>{{post.title}}</h5>
+            </div>
+            <div class='stream-header-details small-4'>
+                    <small class='time c2fc_m'>{{post.created_at}}</small><br>
+            </div>
+        </div>
+        <div class='blog-content-container card-section'>
+            <p class='blog-content'>{{post.summary}}</p>
+        </div>
+    </div>
+</div>

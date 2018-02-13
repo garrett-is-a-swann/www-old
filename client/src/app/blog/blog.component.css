@@ -1,0 +1,45 @@
+.blog-stream {
+}
+
+.content-card {
+}
+
+.stream-item-header {
+    padding-top: 0.25rem;
+    padding-right: 0.50;
+    padding-bottom: 0;
+    padding-left: 0.50rem;
+}
+.stream-header-title {
+}
+.stream-header-details {
+    text-align:right;
+}
+
+.blog-content-container {
+    padding-top: 0.5rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.50rem;
+    top: auto;
+    left: auto;
+    width: inherit;
+}
+
+.blog-author {
+    max-width: 100%;
+    top: auto;
+    left: auto;
+    width: inherit;
+}
+
+.time {
+    font-size: 14px;
+}
+/*
+.content {
+    display: block;
+    margin-left: 58px;
+    //cursor:pointer;/
+    background: #637691;
+}*/

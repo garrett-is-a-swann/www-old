@@ -1,5 +1,144 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 .body {
-    background-color: #add8e6;
 }
+
+.shaded {
+    -webkit-box-shadow: 
+        0 2px 2px 0 rgba(0,0,0,0.14)
+        ,0 1px 5px 0 rgba(0,0,0,0.12)
+        ,0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow: 
+        0 2px 2px 0 rgba(0,0,0,0.14)
+        ,0 1px 5px 0 rgba(0,0,0,0.12)
+        ,0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.shaded-soft {
+    -webkit-box-shadow: 
+        0 2px 2px 0 rgba(0,0,0,0.07)
+        ,0 1px 5px 0 rgba(0,0,0,0.04)
+        ,0 3px 1px -2px rgba(0,0,0,0.1);
+    box-shadow: 
+        0 2px 2px 0 rgba(0,0,0,0.07)
+        ,0 1px 5px 0 rgba(0,0,0,0.04)
+        ,0 3px 1px -2px rgba(0,0,0,0.1);
+}
+
+.tabs-title {
+    /* No select */
+    /* Chrome / Safari */
+    /* Firefox */
+    /* IE10+ */
+    -webkit-user-select: none;         
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+
+    /* Rules below not implemented in browsers yet */
+    /*
+    -o-user-select: none;
+    user-select: none;
+    */
+}
+/* Remove Focus Highlight */
+
+.clickable {
+    cursor: pointer;
+}
+
+*:focus {
+    outline-color: #00000042;
+    outline-style: auto;
+    outline-width: thin;
+}
+
+.tabs-title>a:hover {
+    background: #d9f3e6;
+}
+
+.tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+    background: #d9f3e680;
+}
+
+/*Primary colors*/
+.c1bg_ { /*background*/
+    background-color: #d9f3e6;
+}.c1fc_ {/*foreground*/
+    color: #d9f3e6;
+}
+.c1bg_p {
+    background-color: #e3fcef;
+}.c1fc_p {
+    color: #e3fcef;
+}
+.c1bg_pp {
+    background-color: #f6fdfa;
+}.c1fc_pp {
+    color: #f6fdfa;
+}
+.c1bg_m {
+    background-color: #afe0c7
+}.c1fc_m {
+    color: #afe0c7
+}
+.c1bg_mm {
+    background-color: #7ec3a0;
+}.c1fc_mm {
+    color: #7ec3a0;
+}
+
+/*Secondary colors*/
+.c2bg_ {
+    background-color: #d8e7f0;
+}.c2fc_ {
+    color: #d8e7f0;
+}
+.c2bg_p {
+    background-color: #e3f2fb;
+}.c2fc_p {
+    color: #e3f2fb;
+}
+.c2bg_pp {
+    background-color: #f6fafd;
+}.c2fc_pp {
+    color: #f6fafd;
+}
+.c2bg_m {
+    background-color: #adc8d9;
+}.c2fc_m {
+    color: #adc8d9;
+}
+.c2bg_mm {
+    background-color: #799fb6;
+}.c2fc_mm {
+    color: #799fb6;
+}
+
+/*Tertiary colors*/
+.c3bg_ {
+    background-color: #eefbe0;
+}.c3fc_ {
+    color: #eefbe0;
+}
+.c3bg_p {
+    background-color: #f1fee5;
+}.c3fc_p {
+    color: #f1fee5;
+}
+.c3bg_pp {
+    background-color: #fbfef7;
+}.c3fc_pp {
+    color: #fbfef7;
+}
+.c3bg_m {
+    background-color: #daf5c0;
+}.c3fc_m {
+    color: #daf5c0;
+}
+.c3bg_mm {
+    background-color: #c2eb98;
+}.c3fc_mm {
+    color: #c2eb98;
+}
+

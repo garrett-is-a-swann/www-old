@@ -50,4 +50,7 @@ export class HomeComponent {
 
     resumeConfig: any = {
     };
+
+
+
 }

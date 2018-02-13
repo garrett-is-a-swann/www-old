@@ -1,15 +1,44 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class='grid-x'>
+
+    <!-- Header should go here-->
+    <div class='cell'>full width cell </div>
+    <!-- Header should go here-->
+
+    <div class='cell'>
+        <ul class='tabs c1bg_mm' data-tabs id='site-tabs'>
+            <li class='tabs-title shaded is-active'><a class='tab-link' href='#blog' aria-selected='true'>Blog</a></li>
+            <li class='tabs-title shaded'><a class='tab-link' data-tabs-target='other' href='#other'>other</a></li>
+        </ul>
+
+        <div class='tabs-content shaded' data-tabs-content='site-tabs'>
+            <div class='tabs-panel c1bg_p  is-active' id='blog'>
+                <router-outlet class="padded"></router-outlet>
+            </div>
+            <div class='tabs-panel' id='other'>
+                <p>This site is under construction</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
 <div class="app">
     <div class="grid-y medium grid-frame">
 
         <header></header>
+        <git-calendar></git-calendar>
+
 
         <navigation></navigation>
 
         <div class="cell medium-auto medium-cell-block-container">
             <router-outlet class="padded"></router-outlet>
         </div>
-        <footer></footer>
+        <div class="cell medium-cell-block-container footer">
+            <a style="text-align: center;" href="mailto:gswann@mail.csuchico.edu"> <small >Contact</small> </a>
+            <small style="text-align: center;">All images by Garrett Swann</small>
+        </div>
     </div>
 
 </div>
+-->

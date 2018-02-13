@@ -1,3 +1,4 @@
+
 <sidebar-content *ngIf="path == '/'" [config]='homeConfig'>hello</sidebar-content>
 <div *ngIf='path == "/links"' class="grid-x grid-padding-x">
     <div class="cell medium-6 ">
@@ -29,7 +30,7 @@
     <div class="cell medium-6 ">
         <a style="text-align: center;" href="assets/2017.docx">Resume as doc</a>
     </div>
-    <div class="cell auto medium-cell-block-y callout" >
+    <!--div class="cell auto medium-cell-block-y callout" >
         <pdf-viewer *ngIf="path == '/resume'" [src]="'assets/2017.pdf'" [render-text]="true" [show-all]="true" >hello</pdf-viewer>
-    </div>
+    </div-->
 </div>
